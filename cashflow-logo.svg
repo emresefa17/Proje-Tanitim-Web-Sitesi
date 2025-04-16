@@ -1,0 +1,7 @@
+<svg width="120" height="30" viewBox="0 0 120 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M13.5 8.25c-4.15 0-7.5 3.35-7.5 7.5s3.35 7.5 7.5 7.5c1.82 0 3.48-.65 4.79-1.71" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M13.5 5.25V8.25M13.5 20.25v3M6 13.5H3M24 13.5h-3" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M19.5 13.5c0 3.315-2.685 6-6 6" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M13.5 11.25c1.243 0 2.25 1.007 2.25 2.25s-1.007 2.25-2.25 2.25-2.25-1.007-2.25-2.25 1.007-2.25 2.25-2.25z" fill="#fff"/>
+  <text x="30" y="18" font-family="Inter, sans-serif" font-size="16" font-weight="600" fill="#fff">cashflow</text>
+</svg> 

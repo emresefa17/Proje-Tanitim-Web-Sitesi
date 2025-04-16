@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Adisyon Sistemi</title>
+    <!-- Preload critical images -->
+    <link rel="preload" href="cashflow-logo.svg" as="image">
+    <link rel="preload" href="support-image.png" as="image">
+    
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Critical CSS for faster mobile rendering -->
+    <style>
+        @media (max-width: 768px) {
+            header {
+                position: fixed !important;
+                background-color: rgba(14, 51, 49, 0.95) !important;
+                padding: 15px 0 !important;
+                top: 0 !important;
+                left: 0 !important;
+                width: 100% !important;
+                z-index: 10 !important;
+            }
+            
+            .hero-container {
+                padding-top: 100px !important;
+            }
+            
+            .hamburger-menu {
+                display: flex !important;
+                position: relative !important;
+                z-index: 9999 !important;
+            }
+            
+            .main-nav {
+                display: flex !important;
+                justify-content: flex-end !important;
+            }
+            
+            .desktop-auth {
+                display: none !important;
+            }
+            
+            .nav-links {
+                position: fixed !important;
+                top: 0 !important;
+                right: -100% !important;
+                height: 100% !important;
+                width: 80% !important;
+                max-width: 300px !important;
+                background-color: #0e3331 !important;
+                display: flex !important;
+                flex-direction: column !important;
+                padding: 80px 30px 30px !important;
+                z-index: 998 !important; 
+                transition: all 0.3s ease-in-out !important;
+            }
+            
+            .nav-links.active {
+                right: 0 !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <img src="cashflow-logo.svg" alt="Cashflow">
+            </div>
+            <nav class="main-nav">
+                <div class="hamburger-menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="#">Masalar</a></li>
+                    <li><a href="#">Siparişler</a></li>
+                    <li><a href="#">Ürünler</a></li>
+                    <li><a href="#">Raporlar</a></li>
+                    <li><a href="#">Hakkımızda</a></li>
+                    <li><a href="#">İletişim</a></li>
+                    <li class="mobile-auth">
+                        <a href="#" class="login-btn">Giriş Yap</a>
+                        <a href="#" class="signup-btn">Kayıt Ol</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="auth-buttons desktop-auth">
+                <a href="#" class="login-btn">Giriş Yap</a>
+                <a href="#" class="signup-btn">Kayıt Ol</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container hero-container">
+                <h1 data-aos="fade-up" data-aos-duration="1000">Modern ve Kullanışlı Adisyon Sistemi</h1>
+                <p class="hero-description" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+                    Restoranınızın sipariş ve masa yönetimini kolaylaştırın,
+                    <br>müşteri memnuniyetini artırın ve işletmenizi daha verimli hale getirin.
+                </p>
+                <a href="#" class="demo-btn" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">Demo İncele</a>
+            </div>
+        </section>
+
+        <section class="feature-section">
+            <div class="container">
+                <div class="feature-content">
+                    <div class="feature-text" data-aos="fade-right" data-aos-duration="1000">
+                        <h2>Restoran Yönetimi <br>Artık Çok Kolay</h2>
+                        <p>Karmaşık sipariş yönetimi ve masa takibi sorunlarına son verin. Adisyon sistemimiz ile masaları kolayca yönetin, siparişleri hızlıca alın ve takip edin. Çözümümüz restoran operasyonlarınızı düzenler, verimliliğinizi artırır ve satışlarınızı maksimize eder.</p>
+                        <a href="#" class="get-started-btn">Hemen Başlayın</a>
+                    </div>
+                    <div class="feature-image" data-aos="fade-left" data-aos-duration="1000">
+                        <img src="dashboard-image.png" alt="Cashflow Dashboard" class="dashboard-img">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="support-section">
+            <div class="container">
+                <div class="support-content">
+                    <div class="support-text" data-aos="fade-right" data-aos-duration="1000">
+                        <h2>7/24 Teknik Destek <br>& Yardım</h2>
+                        <p>Uzman destek ekibimiz, ürün ve hizmetlerimiz hakkında derin bilgiye sahiptir. Sorularınızı yanıtlamak, sorunları çözmek ve rehberlik sağlamak için her zaman hazırız. Telefon, e-posta veya online sohbet yoluyla size hızlıca yardımcı oluyoruz.</p>
+                        
+                        <div class="stats-container">
+                            <div class="stat-item" data-aos="fade-up" data-aos-delay="200">
+                                <div class="stat-number">98%</div>
+                                <div class="stat-label">Müşteri Memnuniyeti</div>
+                            </div>
+                            <div class="stat-item" data-aos="fade-up" data-aos-delay="300">
+                                <div class="stat-number">1K+</div>
+                                <div class="stat-label">Haftalık Yeni Kullanıcı</div>
+                            </div>
+                            <div class="stat-item" data-aos="fade-up" data-aos-delay="400">
+                                <div class="stat-number">50</div>
+                                <div class="stat-label">Destek Ekibi Üyesi</div>
+                            </div>
+                            <div class="stat-item" data-aos="fade-up" data-aos-delay="500">
+                                <div class="stat-number">40%</div>
+                                <div class="stat-label">Yıllık Büyüme</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="support-image" data-aos="fade-left" data-aos-duration="1000">
+                        <img src="support-image.png" alt="Cashflow Support" class="mobile-img">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="dual-features-section">
+            <div class="container">
+                <div class="dual-features-container">
+                    <div class="feature-card" data-aos="fade-up" data-aos-duration="800">
+                        <h3>Hızlı ve Kolay <br>Sipariş Yönetimi</h3>
+                        <p>Siparişleri anında alın, mutfağa iletin ve takip edin. Masalar arası transfer, sipariş düzenleme ve hızlı hesap alma özellikleriyle servis sürecinizi optimize edin.</p>
+                        <div class="feature-card-image">
+                            <img src="feature-card-1.png" alt="Sipariş Yönetimi Arayüzü" class="feature-img">
+                        </div>
+                    </div>
+                    <div class="feature-card" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
+                        <h3>Detaylı Raporlama <br>ve Analiz</h3>
+                        <p>Günlük, haftalık ve aylık satış raporları, popüler ürünler analizi ve masa doluluk oranları ile işletmenizi daha iyi yönetin. Veriye dayalı kararlar alın.</p>
+                        <div class="feature-card-image">
+                            <img src="feature-card-2.png" alt="Raporlama Arayüzü" class="feature-img">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="industries-section">
+            <div class="container">
+                <div class="industries-content">
+                    <div class="industries-text" data-aos="fade-up" data-aos-duration="800">
+                        <h2>Tüm İşletme Türleri.<br>Tek Çözüm</h2>
+                        <p>Modern adisyon sistemimiz farklı restoran türlerine uygun çözümler sunar. Cafe'lerden fine dining restoranlara, fast food zincirlerinden otellere kadar tüm yeme-içme işletmeleri için özelleştirilebilir ve entegre çözümler.</p>
+                    </div>
+                    
+                    <div class="industries-grid">
+                        <div class="industry-card" data-aos="zoom-in" data-aos-duration="600">
+                            <img src="industry-travel.png" alt="Cafe ve Restoranlar" class="industry-img">
+                            <div class="industry-label">Cafe ve Restoranlar</div>
+                        </div>
+                        <div class="industry-card" data-aos="zoom-in" data-aos-duration="600" data-aos-delay="100">
+                            <img src="industry-check.png" alt="Fast Food" class="industry-img">
+                            <div class="industry-label">Fast Food</div>
+                        </div>
+                        <div class="industry-card" data-aos="zoom-in" data-aos-duration="600" data-aos-delay="200">
+                            <img src="industry-laundry.png" alt="Oteller" class="industry-img">
+                            <div class="industry-label">Oteller</div>
+                        </div>
+                        <div class="industry-card" data-aos="zoom-in" data-aos-duration="600" data-aos-delay="300">
+                            <img src="industry-gas.png" alt="Catering" class="industry-img">
+                            <div class="industry-label">Catering</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="enrollment-section">
+            <div class="container">
+                <div class="enrollment-header">
+                    <h2 data-aos="fade-right" data-aos-duration="800">Hızlı ve Kolay <br>Kayıt Süreci</h2>
+                    <p class="enrollment-desc" data-aos="fade-left" data-aos-duration="800">Kullanıcı dostu arayüzümüz ile kayıt işleminizi hızlıca tamamlayın ve kapsamlı adisyon çözümlerimize anında erişin.</p>
+                </div>
+                
+                <div class="enrollment-steps">
+                    <div class="step-card" data-aos="fade-up" data-aos-duration="800">
+                        <div class="step-image">
+                            <img src="enrollment-step1.png" alt="Simple Online Form" class="step-img">
+                        </div>
+                        <div class="step-content">
+                            <h3 class="step-number">01 Basit Online Kayıt</h3>
+                            <p class="step-desc">Zamanınızın değerli olduğunu biliyoruz. Bu yüzden kayıt sürecini basit ve hızlı hale getirdik. İletişim bilgilerinizi girin ve hemen başlayın.</p>
+                        </div>
+                    </div>
+                    <div class="step-card" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
+                        <div class="step-image">
+                            <img src="enrollment-step2.png" alt="Setup Your Store" class="step-img">
+                        </div>
+                        <div class="step-content">
+                            <h3 class="step-number">02 Restoran Bilgilerini Ekleyin</h3>
+                            <p class="step-desc">İletişim bilgilerinizi aldıktan sonra, restoranınızın temel bilgilerini (masa sayısı, menü kategorileri, ürünler vb.) sisteme ekleyin ve özelleştirin.</p>
+                        </div>
+                    </div>
+                    <div class="step-card" data-aos="fade-up" data-aos-duration="800" data-aos-delay="400">
+                        <div class="step-image">
+                            <img src="enrollment-step2.png" alt="Sistem Eğitimi" class="step-img">
+                        </div>
+                        <div class="step-content">
+                            <h3 class="step-number">03 Sistem Eğitimi ve Başlangıç</h3>
+                            <p class="step-desc">Uzman ekibimiz size sistemin kullanımını öğretir ve canlı destek ile yanınızda olur. Hemen kullanmaya başlayın ve işletmenizi modern çözümlerle yönetin.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="enrollment-divider"></div>
+            </div>
+        </section>
+
+        <section class="cta-section">
+            <div class="container">
+                <div class="cta-content" data-aos="zoom-in" data-aos-duration="800">
+                    <h2>Restoranınızı Modern <br>Sistemle Yönetin</h2>
+                    <p data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">Yüzlerce restoran işletmecisinin tercih ettiği adisyon sistemimiz ile işletmenizi daha verimli hale getirin.</p>
+                    <div class="cta-buttons" data-aos="fade-up" data-aos-duration="800" data-aos-delay="400">
+                        <a href="#" class="demo-btn">Demo İncele</a>
+                        <a href="#" class="contact-btn">Satış Temsilcisi</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-nav-container">
+                    <div class="footer-nav-column" data-aos="fade-up" data-aos-duration="600" data-aos-delay="100">
+                        <h4>Ürünler</h4>
+                        <ul class="footer-nav">
+                            <li><a href="#">Adisyon</a></li>
+                            <li><a href="#">Ödemeler</a></li>
+                            <li><a href="#">Raporlar</a></li>
+                            <li><a href="#">Entegrasyonlar</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-nav-column" data-aos="fade-up" data-aos-duration="600" data-aos-delay="200">
+                        <h4>Company</h4>
+                        <ul class="footer-nav">
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Careers</a></li>
+                            <li><a href="#">Press</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-nav-column" data-aos="fade-up" data-aos-duration="600" data-aos-delay="300">
+                        <h4>Resources</h4>
+                        <ul class="footer-nav">
+                            <li><a href="#">Blog</a></li>
+                            <li><a href="#">Help Center</a></li>
+                            <li><a href="#">Regulatory</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-nav-column" data-aos="fade-up" data-aos-duration="600" data-aos-delay="400">
+                        <h4>Legal</h4>
+                        <ul class="footer-nav">
+                            <li><a href="#">Terms & Conditions</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-nav-column subscribe-column" data-aos="fade-up" data-aos-duration="600" data-aos-delay="500">
+                        <h4>Subscribe to our newsletter</h4>
+                        <div class="newsletter-form">
+                            <input type="email" placeholder="Enter your email" class="newsletter-input">
+                            <button class="newsletter-btn">Submit</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="footer-divider"></div>
+                
+                <div class="footer-bottom">
+                    <div class="footer-info">
+                        <p>Cashflow is registered in 123 Main Street, Suite 101, New York, United States. Cashflow is a technology provider (not a bank). Banking services are provided by partner banks, Member FDIC.</p>
+                        <p class="copyright">© Cashflow 2024. All rights reserved.</p>
+                    </div>
+                    <div class="footer-logo">
+                        <img src="cashflow-logo.svg" alt="Cashflow">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="lightbox-overlay" id="lightbox">
+        <span class="lightbox-close">&times;</span>
+        <img class="lightbox-content" id="lightbox-img">
+    </div>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Apply mobile styles immediately
+        if(window.innerWidth <= 768) {
+            document.body.classList.add('mobile-view');
+            document.querySelector('header').classList.add('mobile-header');
+        }
+        
+        // Hamburger menu functionality - moved outside DOMContentLoaded for immediate execution
+        const hamburgerMenu = document.querySelector('.hamburger-menu');
+        const navLinks = document.querySelector('.nav-links');
+        const navItems = document.querySelectorAll('.nav-links li a');
+        
+        // Make sure hamburger menu toggle works
+        hamburgerMenu.addEventListener('click', function(e) {
+            e.stopPropagation();
+            hamburgerMenu.classList.toggle('active');
+            navLinks.classList.toggle('active');
+            document.body.classList.toggle('menu-open');
+            console.log('Hamburger clicked'); // Debug log
+        });
+        
+        // Close menu when clicking on a nav item
+        navItems.forEach(item => {
+            item.addEventListener('click', function() {
+                hamburgerMenu.classList.remove('active');
+                navLinks.classList.remove('active');
+                document.body.classList.remove('menu-open');
+            });
+        });
+        
+        // Close menu when clicking outside
+        document.addEventListener('click', function(e) {
+            if (navLinks.classList.contains('active') && 
+                !navLinks.contains(e.target) && 
+                e.target !== hamburgerMenu) {
+                hamburgerMenu.classList.remove('active');
+                navLinks.classList.remove('active');
+                document.body.classList.remove('menu-open');
+            }
+        });
+        
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initialize AOS with a short delay to ensure smooth animations
+            setTimeout(function() {
+                AOS.init({
+                    once: true,
+                    offset: 200,
+                    disable: false // Animasyonları tüm cihazlarda etkinleştir
+                });
+            }, 100);
+
+            const header = document.querySelector('header');
+            
+            // Add shadow to header on scroll
+            window.addEventListener('scroll', function() {
+                if (window.innerWidth <= 768) {
+                    if (window.scrollY > 10) {
+                        header.classList.add('scrolled');
+                    } else {
+                        header.classList.remove('scrolled');
+                    }
+                }
+            });
+
+            // Lightbox functionality for images
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImg = document.getElementById('lightbox-img');
+            const images = document.querySelectorAll('.mobile-img, .dashboard-img, .feature-img, .industry-img, .step-img');
+            
+            images.forEach(img => {
+                img.style.cursor = 'pointer';
+                img.addEventListener('click', function() {
+                    lightboxImg.src = this.src;
+                    lightbox.style.display = 'flex';
+                    document.body.style.overflow = 'hidden';
+                });
+            });
+            
+            // Close lightbox when clicking the X or anywhere on the overlay
+            document.querySelector('.lightbox-close').addEventListener('click', function() {
+                lightbox.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            });
+            
+            lightbox.addEventListener('click', function(e) {
+                if (e.target === lightbox) {
+                    lightbox.style.display = 'none';
+                    document.body.style.overflow = 'auto';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
